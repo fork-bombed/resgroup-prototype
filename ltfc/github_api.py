@@ -98,7 +98,7 @@ def get_release_template(
             lead_time_difference_colour = 'success'
     else:
         prev_version = release.get_tag_name()
-        lead_time_difference = '0'
+        lead_time_difference = '0m'
         lead_time_difference_colour = 'yellow'
 
 
@@ -130,6 +130,7 @@ if __name__ == "__main__":
         prev_release = releases[1]
     else:
         prev_release = None
+    print(prev_release)
     release.update(
         message=get_release_template(
             release=release, 
