@@ -13,8 +13,6 @@ def get_commits_between_releases(
     ) -> [commit.Commit]:
 
     commits = []
-    print(repository.get_commits())
-    print(last_release.get_creation_time(), release.get_creation_time())
     for c in repository.get_commits():
         if (c.get_date() >= last_release.get_creation_time() and
                 c.get_date() <= release.get_creation_time()):
